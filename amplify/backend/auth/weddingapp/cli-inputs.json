@@ -1,0 +1,12 @@
+{
+  "version": "1",
+  "cognitoConfig": {
+    "identityPoolName": "weddingapp_identitypool_25e6ae78",
+    "allowUnauthenticatedIdentities": true,
+    "authSelections": "identityPoolOnly",
+    "resourceName": "weddingapp",
+    "sharedId": "25e6ae78",
+    "serviceName": "Cognito",
+    "useDefault": "manual"
+  }
+}

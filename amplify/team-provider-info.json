@@ -10,6 +10,14 @@
       "StackName": "amplify-weddingapp-dev-222347",
       "StackId": "arn:aws:cloudformation:us-east-1:410318136749:stack/amplify-weddingapp-dev-222347/4a8c3c30-6c3e-11ed-a97e-0ac1698c6505",
       "AmplifyAppId": "d2nqyx11o6ayst"
+    },
+    "categories": {
+      "auth": {
+        "weddingapp": {}
+      },
+      "analytics": {
+        "weddingapp": {}
+      }
     }
   }
 }

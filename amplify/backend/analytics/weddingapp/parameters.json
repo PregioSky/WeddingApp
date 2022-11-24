@@ -1,0 +1,21 @@
+{
+    "appName": "weddingapp",
+    "roleName": "pinpointLambdaRole70be70ba",
+    "cloudformationPolicyName": "cloudformationPolicy70be70ba",
+    "cloudWatchPolicyName": "cloudWatchPolicy70be70ba",
+    "pinpointPolicyName": "pinpointPolicy70be70ba",
+    "authPolicyName": "pinpoint_amplify_70be70ba",
+    "unauthPolicyName": "pinpoint_amplify_70be70ba",
+    "authRoleName": {
+        "Ref": "AuthRoleName"
+    },
+    "unauthRoleName": {
+        "Ref": "UnauthRoleName"
+    },
+    "authRoleArn": {
+        "Fn::GetAtt": [
+            "AuthRole",
+            "Arn"
+        ]
+    }
+}
