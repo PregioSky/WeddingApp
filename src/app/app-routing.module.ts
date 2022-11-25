@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { WeddingMainPageComponent } from './wedding-main-page/wedding-main-page.component';
 
-const routes: Routes = [{path: 'mainpage', component: WeddingMainPageComponent }];
+const routes: Routes = [{path: 'mainpage', component: WeddingMainPageComponent },
+{ path: '', redirectTo: '/mainpage', pathMatch: 'full' }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
