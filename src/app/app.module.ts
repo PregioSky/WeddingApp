@@ -10,7 +10,8 @@ import { WeddingMainPageComponent } from './wedding-main-page/wedding-main-page.
 @NgModule({
   declarations: [
     AppComponent,
-    WeddingMainPageComponent
+    WeddingMainPageComponent,
+    
   ],
   imports: [
     BrowserModule,
