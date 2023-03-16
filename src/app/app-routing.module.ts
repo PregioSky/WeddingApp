@@ -1,12 +1,25 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { WeddingMainPageComponent } from './wedding-main-page/wedding-main-page.component';
 
-const routes: Routes = [{path: 'mainpage', component: WeddingMainPageComponent },
-{ path: '', redirectTo: '/mainpage', pathMatch: 'full' }];
+const routes = [
+  {
+    path: '',
+    loadChildren: () =>
+      import('./pages/landing-page/landing-page.module').then(
+        (m) => m.LandingPageModule
+      ),
+  },
+  {
+    path: 'viaggio',
+    loadChildren: () =>
+      import('./pages/viaggio/viaggio.module').then((m) => m.ViaggioModule),
+  },
+];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
