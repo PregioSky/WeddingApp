@@ -4,7 +4,6 @@
 .blog-post-card4-blog-post-card {
   width: 100%;
   display: flex;
-  max-width: 1400px;
   box-shadow: 5px 5px 10px 0px rgba(18, 18, 18, 0.1);
   transition: 0.3s;
   flex-direction: column;

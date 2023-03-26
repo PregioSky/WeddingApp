@@ -7,7 +7,7 @@ import { Title, Meta } from '@angular/platform-browser'
   styleUrls: ['viaggio.component.css'],
 })
 export class Viaggio {
-  rawhr9g: string = ' '
+  rawop04: string = ' '
   constructor(private title: Title, private meta: Meta) {
     this.title.setTitle('Viaggio - WeddingSite')
     this.meta.addTags([
