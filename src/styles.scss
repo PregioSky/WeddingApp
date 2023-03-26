@@ -2,8 +2,8 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 @font-face {
-    font-family: ringbearer;
-    src: url(assets/fonts/Ringbearer.TTF) format("opentype");
+    font-family: "Ringbearer";
+    src: local("Ringbearer"), url(assets/fonts/Ringbearer.TTF) format("opentype");
   }
 
  
@@ -40,7 +40,7 @@
     color: var(--dl-color-gray-black);
     display: inline-block;
     padding: 0.5rem 1rem;
-    font-family: Bilbo Swash Caps;
+    font-family: Ringbearer;
     border-color: var(--dl-color-gray-black);
     border-width: 1px;
     border-radius: 4px;
@@ -61,7 +61,7 @@
     color: var(--dl-color-gray-black);
     cursor: auto;
     padding: 0.5rem;
-    font-family: Bilbo Swash Caps;
+    font-family: Ringbearer;
     border-color: var(--dl-color-gray-black);
     border-width: 1px;
     border-radius: 4px;
@@ -71,7 +71,7 @@
     color: var(--dl-color-gray-black);
     cursor: auto;
     padding: 0.5rem 1rem;
-    font-family: Bilbo Swash Caps;
+    font-family: Ringbearer;
     border-color: var(--dl-color-gray-black);
     border-width: 1px;
     border-radius: 4px;
@@ -79,14 +79,14 @@
   }
   .Subheading {
     font-size: 1.6rem;
-    font-family: Bilbo Swash Caps;
+    font-family: Ringbearer;
     font-weight: 400;
     text-transform: none;
     text-decoration: none;
   }
   .Heading {
     font-size: 3rem;
-    font-family: Bilbo Swash Caps;
+    font-family: Ringbearer;
     font-weight: 700;
     line-height: 1.55;
     text-transform: none;
@@ -94,14 +94,14 @@
   }
   .Button {
     font-size: 14px;
-    font-family: Bilbo Swash Caps;
+    font-family: Ringbearer;
     font-weight: 600;
     text-transform: none;
     text-decoration: none;
   }
   .Content {
     font-size: 16px;
-    font-family: Bilbo Swash Caps;
+    font-family: Ringbearer;
     font-weight: 400;
     line-height: 1.55;
     text-transform: none;

@@ -966,7 +966,7 @@
   color: var(--dl-color-primary-darktheme);
   font-size: 16px;
   transition: 0.3s;
-  font-family: Bilbo Swash Caps;
+  font-family: Ringbearer;
   font-weight: 400;
   line-height: 1.55;
   padding-top: var(--dl-space-space-unit);
@@ -2175,6 +2175,9 @@
   .landing-page-container001 {
     width: 80%;
   }
+  .landing-page-container068 {
+    align-items: center;
+  }
   .landing-page-logo {
     font-size: 1.7rem;
   }
@@ -2476,9 +2479,6 @@
     padding-left: var(--dl-space-space-unit);
     padding-right: var(--dl-space-space-unit);
     padding-bottom: 32px;
-  }
-  .landing-page-container068 {
-    align-items: center;
   }
   .landing-page-text39 {
     font-size: 2rem;

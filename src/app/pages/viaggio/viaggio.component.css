@@ -2,6 +2,7 @@
   display: contents; 
 }
 .viaggio-container {
+  font-family: Ringbearer;
   width: 100%;
   display: flex;
   overflow: auto;
