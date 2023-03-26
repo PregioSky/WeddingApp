@@ -7,11 +7,16 @@ import { Title, Meta } from '@angular/platform-browser'
   styleUrls: ['landing-page.component.css'],
 })
 export class LandingPage {
-  raw0oz7: string = ' '
-  rawoa91: string = ' '
-  raw9zjt: string = ' '
-  rawbf0p: string = ' '
-  rawm2m8: string = ' '
+  rawzfh3: string = ' '
+  rawucpn: string = ' '
+  raweub5: string = ' '
+  rawo3tf: string = ' '
+  rawgd6a: string = ' '
+  rawx0mo: string = ' '
+  rawvsbx: string = ' '
+  raw3ahp: string = ' '
+  raw3r01: string = ' '
+  rawa2vu: string = ' '
   constructor(private title: Title, private meta: Meta) {
     this.title.setTitle('WeddingSite')
     this.meta.addTags([
