@@ -330,7 +330,7 @@
       </div>
       <div class="landing-page-container045">
         <div class="landing-page-container046">
-          <form method="POST" class="landing-page-form">
+          <form autocolpete="off" [formGroup]="createForm" (ngSubmit)="onCreate(createForm.value)" class="landing-page-form">
             <div class="landing-page-container047">
               <div class="landing-page-container048">
                 <label class="landing-page-text29">
@@ -339,9 +339,9 @@
               </div>
               <div class="landing-page-container049">
                 <label class="landing-page-text30">Sì</label>
-                <input type="radio" name="radio" />
+                <input type="radio" name="radio" value="Y" formControlName="partecipation"/>
                 <label class="landing-page-text31">No</label>
-                <input type="radio" name="radio" />
+                <input type="radio" name="radio" value="Y" formControlName="partecipation"/>
               </div>
             </div>
             <div class="landing-page-container050">
@@ -351,22 +351,9 @@
               <div class="landing-page-container052">
                 <input
                   type="text"
-                  placeholder="Nome  e Cognome"
+                  placeholder="Nome e Cognome"
+                  formControlName="nameSurname"
                   class="landing-page-textinput Content"
-                />
-              </div>
-            </div>
-            <div class="landing-page-container053">
-              <div class="landing-page-container054">
-                <label class="landing-page-text33">
-                  Porti qualcuno con te?
-                </label>
-              </div>
-              <div class="landing-page-container055">
-                <input
-                  type="text"
-                  placeholder="Nome e Cognome del +1"
-                  class="landing-page-textinput1 Content"
                 />
               </div>
             </div>
@@ -379,6 +366,7 @@
               <div class="landing-page-container058">
                 <textarea
                   placeholder="Nessuna, allergico ai crostacei etc."
+                  formControlName="intolerances"
                   class="landing-page-textarea Content"
                 ></textarea>
               </div>
@@ -391,9 +379,9 @@
               </div>
               <div class="landing-page-container061">
                 <label class="landing-page-text36">Sì</label>
-                <input type="radio" name="radio" />
+                <input type="radio" name="radio" value="Y" formControlName="shuttle"/>
                 <label class="landing-page-text37">No</label>
-                <input type="radio" name="radio" />
+                <input type="radio" name="radio" value="N" formControlName="shuttle"/>
               </div>
             </div>
             <div class="landing-page-container062">
@@ -405,13 +393,14 @@
               <div class="landing-page-container064">
                 <textarea
                   placeholder="Il matrmionio è la tomba dell'amore e non esistono più le mezze stagioni"
+                  formControlName="freeText"
                   class="landing-page-textarea1 Content"
                 ></textarea>
               </div>
             </div>
             <div class="landing-page-container065">
               <div class="landing-page-container066">
-                <button class="landing-page-button button">Conferma</button>
+                <button type="submit" class="landing-page-button button">Conferma</button>
               </div>
             </div>
           </form>

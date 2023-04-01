@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { Title, Meta } from '@angular/platform-browser'
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { APIService, Guest } from '../../API.service';
 
 
 
@@ -20,7 +21,10 @@ export class LandingPage {
   rawb2j8: string = ' '
   rawum62: string = ' '
   raw0iqg: string = ' '
-  constructor(private title: Title, private meta: Meta,  private fb: FormBuilder) {
+  public createForm: FormGroup;
+  
+
+  constructor(private title: Title, private meta: Meta,  private api: APIService, private fb: FormBuilder) {
     this.title.setTitle('WeddingSite')
     this.meta.addTags([
       {
@@ -28,5 +32,26 @@ export class LandingPage {
         content: 'WeddingSite',
       },
     ])
+    this.createForm = this.fb.group({
+      partecipation: [true, Validators.required],
+      nameSurname: ['', Validators.required],
+      intolerances: [''],
+      shuttle: [false, Validators.required],
+      freeText: ['']
+    });
+  }
+
+  
+
+  public onCreate(guest: Guest) {
+    this.api
+      .CreateGuest(guest)
+      .then(() => {
+        console.log('nome e cognome: ' + guest.nameSurname + " | partecipa: "+ guest.partecipation + " | navetta: " + guest.shuttle+" | intolleranze: " + guest.intolerances + "testo: " + guest.freeText);
+        this.createForm.reset();
+      })
+      .catch((e) => {
+        console.log('error creating restaurant...', e);
+      });
   }
 }

@@ -1,0 +1,37 @@
+# this is an auto generated file. This will be overwritten
+subscription OnCreateGuest($filter: ModelSubscriptionGuestFilterInput) {
+  onCreateGuest(filter: $filter) {
+    id
+    nameSurname
+    partecipation
+    intolerances
+    shuttle
+    freeText
+    createdAt
+    updatedAt
+  }
+}
+subscription OnUpdateGuest($filter: ModelSubscriptionGuestFilterInput) {
+  onUpdateGuest(filter: $filter) {
+    id
+    nameSurname
+    partecipation
+    intolerances
+    shuttle
+    freeText
+    createdAt
+    updatedAt
+  }
+}
+subscription OnDeleteGuest($filter: ModelSubscriptionGuestFilterInput) {
+  onDeleteGuest(filter: $filter) {
+    id
+    nameSurname
+    partecipation
+    intolerances
+    shuttle
+    freeText
+    createdAt
+    updatedAt
+  }
+}

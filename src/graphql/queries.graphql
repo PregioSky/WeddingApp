@@ -1,0 +1,32 @@
+# this is an auto generated file. This will be overwritten
+query GetGuest($id: ID!) {
+  getGuest(id: $id) {
+    id
+    nameSurname
+    partecipation
+    intolerances
+    shuttle
+    freeText
+    createdAt
+    updatedAt
+  }
+}
+query ListGuests(
+  $filter: ModelGuestFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listGuests(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      nameSurname
+      partecipation
+      intolerances
+      shuttle
+      freeText
+      createdAt
+      updatedAt
+    }
+    nextToken
+  }
+}
