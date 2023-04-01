@@ -15,7 +15,7 @@ const routes = [
 
 @NgModule({
   declarations: [LandingPage],
-  imports: [CommonModule, ComponentsModule, RouterModule.forChild(routes), FormsModule,
+  imports: [CommonModule, ComponentsModule, RouterModule.forChild(routes), FormsModule, ComponentsModule,
     ReactiveFormsModule],
   exports: [LandingPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
