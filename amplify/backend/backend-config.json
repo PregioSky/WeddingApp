@@ -1,46 +1,46 @@
 {
-  "auth": {
-    "weddingapp": {
-      "service": "Cognito",
-      "serviceType": "managed",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [],
-      "frontendAuthConfig": {
-        "socialProviders": [],
-        "usernameAttributes": [],
-        "signupAttributes": [],
-        "passwordProtectionSettings": {
-          "passwordPolicyCharacters": []
-        },
-        "mfaTypes": [],
-        "verificationMechanisms": []
-      }
-    }
-  },
   "analytics": {
     "weddingapp": {
-      "service": "Pinpoint",
-      "providerPlugin": "awscloudformation"
+      "providerPlugin": "awscloudformation",
+      "service": "Pinpoint"
     }
   },
   "api": {
     "insertGuest": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "output": {
         "authConfig": {
+          "additionalAuthenticationProviders": [],
           "defaultAuthentication": {
-            "authenticationType": "API_KEY",
             "apiKeyConfig": {
-              "apiKeyExpirationDays": 365,
               "apiKeyExpirationDate": "2024-03-31T12:57:11.414Z",
+              "apiKeyExpirationDays": 365,
               "description": ""
-            }
-          },
-          "additionalAuthenticationProviders": []
+            },
+            "authenticationType": "API_KEY"
+          }
         }
-      }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "weddingapp": {
+      "dependsOn": [],
+      "frontendAuthConfig": {
+        "mfaTypes": [],
+        "passwordProtectionSettings": {
+          "passwordPolicyCharacters": []
+        },
+        "signupAttributes": [],
+        "socialProviders": [],
+        "usernameAttributes": [],
+        "verificationMechanisms": []
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito",
+      "serviceType": "managed"
     }
   }
 }

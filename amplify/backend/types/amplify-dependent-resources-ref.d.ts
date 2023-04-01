@@ -1,10 +1,4 @@
 export type AmplifyDependentResourcesAttributes = {
-    "auth": {
-        "weddingapp": {
-            "IdentityPoolId": "string",
-            "IdentityPoolName": "string"
-        }
-    },
     "analytics": {
         "weddingapp": {
             "Region": "string",
@@ -17,6 +11,12 @@ export type AmplifyDependentResourcesAttributes = {
             "GraphQLAPIKeyOutput": "string",
             "GraphQLAPIIdOutput": "string",
             "GraphQLAPIEndpointOutput": "string"
+        }
+    },
+    "auth": {
+        "weddingapp": {
+            "IdentityPoolId": "string",
+            "IdentityPoolName": "string"
         }
     }
 }
