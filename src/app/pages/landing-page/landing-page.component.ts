@@ -33,10 +33,10 @@ export class LandingPage {
       },
     ])
     this.createForm = this.fb.group({
-      partecipation: [true, Validators.required],
+      partecipation: ['', Validators.required],
       nameSurname: ['', Validators.required],
       intolerances: [''],
-      shuttle: [false, Validators.required],
+      shuttle: ['', Validators.required],
       freeText: ['']
     });
   }

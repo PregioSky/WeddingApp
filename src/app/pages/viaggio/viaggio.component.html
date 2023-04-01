@@ -87,13 +87,15 @@
     <div class="viaggio-banner">
       <h2 class="viaggio-text05">
         <span>
-          Premi il pulsante sotto per visualizzare in chiaro le istruzioni e le
+          Premi il pulsante sotto per visualizzare in chiaro le
           coordinate bancarie
         </span>
         <br class="viaggio-text07" />
         <span><span [innerHTML]="rawop04"></span></span>
       </h2>
-      <button class="viaggio-button Content">Scopri Coordinate bancarie</button>
+      <button *ngIf="!iban" (click)="showIban()" class="viaggio-button Content">Scopri Coordinate bancarie</button>
+      <div *ngIf="iban" class="viaggio-button Content">IBAN: IT79E0503401416000000000944</div>
+      <div *ngIf="iban" class="viaggio-button Content">Causale: Regalo Nozze</div>
     </div>
   </div>
   <div class="viaggio-container09"></div>

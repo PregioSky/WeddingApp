@@ -8,6 +8,7 @@ import { Title, Meta } from '@angular/platform-browser'
 })
 export class Viaggio {
   rawop04: string = ' '
+  iban=false;
   constructor(private title: Title, private meta: Meta) {
     this.title.setTitle('Viaggio - WeddingSite')
     this.meta.addTags([
@@ -17,4 +18,10 @@ export class Viaggio {
       },
     ])
   }
+  showIban() {
+    this.iban=true;
+  }
 }
+
+
+
