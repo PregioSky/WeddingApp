@@ -10,6 +10,8 @@ import { BlogPostCard4 } from './components/blog-post-card4/blog-post-card4.comp
 import { OutlineButton } from './components/outline-button/outline-button.component';
 import { PlaceCard } from './components/place-card/place-card.component';
 import { SolidButton } from './components/solid-button/solid-button.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 const routes = [
   {
@@ -36,7 +38,8 @@ const routes = [
     AppRoutingModule,
     AmplifyAuthenticatorModule, BrowserModule, RouterModule.forRoot(routes,{
       scrollPositionRestoration: 'enabled'
-    }), ComponentsModule
+    }), ComponentsModule,FormsModule,
+    ReactiveFormsModule
   ],
   exports:[SolidButton, OutlineButton, BlogPostCard4, PlaceCard],
   providers: [],

@@ -1,5 +1,8 @@
 import { Component } from '@angular/core'
 import { Title, Meta } from '@angular/platform-browser'
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+
 
 @Component({
   selector: 'landing-page',
@@ -17,7 +20,7 @@ export class LandingPage {
   rawb2j8: string = ' '
   rawum62: string = ' '
   raw0iqg: string = ' '
-  constructor(private title: Title, private meta: Meta) {
+  constructor(private title: Title, private meta: Meta,  private fb: FormBuilder) {
     this.title.setTitle('WeddingSite')
     this.meta.addTags([
       {
