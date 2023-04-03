@@ -22,7 +22,7 @@ export class LandingPage {
   rawum62: string = ' '
   raw0iqg: string = ' '
   public createForm: FormGroup;
-  
+  disableButtonOnInit=true
 
   constructor(private title: Title, private meta: Meta,  private api: APIService, private fb: FormBuilder) {
     this.title.setTitle('WeddingSite')
@@ -36,12 +36,20 @@ export class LandingPage {
       partecipation: ['', Validators.required],
       nameSurname: ['', Validators.required],
       intolerances: [''],
-      shuttle: ['', Validators.required],
+      shuttle: [''],
       freeText: ['']
     });
   }
-
-  
+  ngOnInit(): void {
+    this.createForm.markAllAsTouched();
+    this.createForm.patchValue({
+      partecipation: 'Y',
+      nameSurname: '',
+      intolerances: '',
+      shuttle: 'N',
+      freeText: ''
+  })
+}
 
   public onCreate(guest: Guest) {
     this.api

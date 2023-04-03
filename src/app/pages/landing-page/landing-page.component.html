@@ -341,7 +341,7 @@
                 <label class="landing-page-text30">Sì</label>
                 <input type="radio" name="radio1" value="Y" formControlName="partecipation"/>
                 <label class="landing-page-text31">No</label>
-                <input type="radio" name="radio1" value="Y" formControlName="partecipation"/>
+                <input type="radio" name="radio1" value="N" formControlName="partecipation"/>
               </div>
             </div>
             <div class="landing-page-container050">
@@ -398,9 +398,35 @@
                 ></textarea>
               </div>
             </div>
-            <div class="landing-page-container065">
-              <div class="landing-page-container066">
-                <button type="submit" class="landing-page-button button">Conferma</button>
+             <div class="landing-page-container065">
+              
+             <div class="landing-page-container066">
+                <!--<button type="submit" class="landing-page-button button">Conferma</button>-->
+                <button [disabled]="!createForm.valid" type="button" class="landing-page-button btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Conferma</button>
+                
+              </div>
+              
+            </div>
+              <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div>Nome e cognome: {{createForm.value.nameSurname}}</div>
+                    <div *ngIf="createForm.value.intolerances !== ''">Intolleranze alimetari o allergie: : {{createForm.value.intolerances}}</div>
+                    <div *ngIf="createForm.value.intolerances === ''">Nessuna intolleranza alimentare o allergia</div>
+                    <div><span *ngIf="createForm.value.shuttle === 'Y'">Interessata/o </span><span *ngIf="createForm.value.shuttle === 'N'">Non interessata/o </span>al servizio navetta</div>
+                    <div *ngIf="createForm.value.freeText !== ''">Messaggio: {{createForm.value.freeText}}</div>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                  </div>
+                </div>
               </div>
             </div>
           </form>
@@ -565,4 +591,8 @@
       </div>
     </div>
   </div>
+  
+
+
+
 </div>
