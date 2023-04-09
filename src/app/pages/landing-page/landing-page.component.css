@@ -1313,6 +1313,23 @@
 .landing-page-button {
   color: var(--dl-color-gray-white);
   background-color: var(--dl-color-primary-darktheme);
+  border-color: var(--dl-color-primary-darktheme);
+}
+.landing-page-button:hover {
+  color: var(--dl-color-primary-darktheme);
+  background-color: var(--dl-color-gray-white);
+  border-color: var(--dl-color-primary-darktheme);
+}
+.landing-page-button:disabled {
+  color: var(--dl-color-gray-white);
+  opacity: 0.3;
+  background-color: var(--dl-color-primary-darktheme);
+  border-color: var(--dl-color-primary-darktheme);
+}
+.landing-page-button:active:focus {
+  color: var(--dl-color-gray-white);
+  background-color: var(--dl-color-primary-darktheme);
+  border-color: var(--dl-color-primary-darktheme);
 }
 .landing-page-container067 {
   width: 100%;
@@ -2548,5 +2565,11 @@
   }
   .landing-page-text88 {
     text-align: center;
+  }
+  .textwrap{
+    word-wrap: break-word;
+  }
+  input[type='radio']:after {
+    accent-color: var(--dl-color-primary-darktheme) !important;
   }
 }

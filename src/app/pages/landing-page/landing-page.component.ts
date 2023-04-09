@@ -2,6 +2,7 @@ import { Component } from '@angular/core'
 import { Title, Meta } from '@angular/platform-browser'
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { APIService, Guest } from '../../API.service';
+import { Modal } from 'bootstrap';
 
 
 
@@ -23,6 +24,7 @@ export class LandingPage {
   raw0iqg: string = ' '
   public createForm: FormGroup;
   disableButtonOnInit=true
+  serviceOK=true;
 
   constructor(private title: Title, private meta: Meta,  private api: APIService, private fb: FormBuilder) {
     this.title.setTitle('WeddingSite')
@@ -57,9 +59,17 @@ export class LandingPage {
       .then(() => {
         console.log('nome e cognome: ' + guest.nameSurname + " | partecipa: "+ guest.partecipation + " | navetta: " + guest.shuttle+" | intolleranze: " + guest.intolerances + "testo: " + guest.freeText);
         this.createForm.reset();
+        this.serviceOK=true;
+        const element = document.getElementById('outcomeModal') as HTMLElement;
+        const myModal = new Modal(element);
+        myModal.show();
       })
       .catch((e) => {
         console.log('error creating restaurant...', e);
+        this.serviceOK=false;
+        const element = document.getElementById('outcomeModal') as HTMLElement;
+        const myModal = new Modal(element);
+        myModal.show();
       });
   }
 }

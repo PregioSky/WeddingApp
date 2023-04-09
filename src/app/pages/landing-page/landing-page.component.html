@@ -334,7 +334,7 @@
             <div class="landing-page-container047">
               <div class="landing-page-container048">
                 <label class="landing-page-text29">
-                  Parteciperai a questo fantastico evento?
+                  Parteciperai a questo fantastico evento?*
                 </label>
               </div>
               <div class="landing-page-container049">
@@ -346,7 +346,7 @@
             </div>
             <div class="landing-page-container050">
               <div class="landing-page-container051">
-                <label class="landing-page-text32">Chi sei?</label>
+                <label class="landing-page-text32">Chi sei?*</label>
               </div>
               <div class="landing-page-container052">
                 <input
@@ -399,7 +399,7 @@
               </div>
             </div>
              <div class="landing-page-container065">
-              
+              * campo obbligatorio
              <div class="landing-page-container066">
                 <!--<button type="submit" class="landing-page-button button">Conferma</button>-->
                 <button [disabled]="!createForm.valid" type="button" class="landing-page-button btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Conferma</button>
@@ -412,19 +412,19 @@
               <div class="modal-dialog">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Vuoi confermare queste informazioni?</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                   </div>
-                  <div class="modal-body">
+                  <div class="modal-body textwrap">
                     <div>Nome e cognome: {{createForm.value.nameSurname}}</div>
                     <div *ngIf="createForm.value.intolerances !== ''">Intolleranze alimetari o allergie: : {{createForm.value.intolerances}}</div>
-                    <div *ngIf="createForm.value.intolerances === ''">Nessuna intolleranza alimentare o allergia</div>
+                    <div *ngIf="createForm.value.intolerances.trim() === ''">Nessuna intolleranza alimentare o allergia</div>
                     <div><span *ngIf="createForm.value.shuttle === 'Y'">Interessata/o </span><span *ngIf="createForm.value.shuttle === 'N'">Non interessata/o </span>al servizio navetta</div>
-                    <div *ngIf="createForm.value.freeText !== ''">Messaggio: {{createForm.value.freeText}}</div>
+                    <div *ngIf="createForm.value.freeText.trim() !== ''">Messaggio: {{createForm.value.freeText}}</div>
                   </div>
                   <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+                    <button type="button" class="btn btn-secondary " data-bs-dismiss="modal">Chiudi</button>
+                    <button type="submit" class="btn landing-page-button" data-bs-dismiss="modal">Conferma</button>
                   </div>
                 </div>
               </div>
@@ -591,8 +591,34 @@
       </div>
     </div>
   </div>
-  
-
-
-
+  <div class="modal fade" id="outcomeModal" tabindex="-1" aria-labelledby="outcomeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="outcomeModal">Tutto a posto!</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body textwrap">
+          <div class="row" *ngIf="serviceOK">
+            <div class="col-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="75" height="75" fill="green" class="bi bi-emoji-smile" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M4.285 9.567a.5.5 0 0 1 .683.183A3.498 3.498 0 0 0 8 11.5a3.498 3.498 0 0 0 3.032-1.75.5.5 0 1 1 .866.5A4.498 4.498 0 0 1 8 12.5a4.498 4.498 0 0 1-3.898-2.25.5.5 0 0 1 .183-.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+              </svg>
+            </div>
+            <div class="col-9">Le informazioni sono state correttamene inserite! Grazie mille per aver risposto!</div>
+          </div>
+          <div class="row" *ngIf="!serviceOK">
+            <div class="col-3">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="red" class="bi bi-emoji-frown" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M4.285 12.433a.5.5 0 0 0 .683-.183A3.498 3.498 0 0 1 8 10.5c1.295 0 2.426.703 3.032 1.75a.5.5 0 0 0 .866-.5A4.498 4.498 0 0 0 8 9.5a4.5 4.5 0 0 0-3.898 2.25.5.5 0 0 0 .183.683zM7 6.5C7 7.328 6.552 8 6 8s-1-.672-1-1.5S5.448 5 6 5s1 .672 1 1.5zm4 0c0 .828-.448 1.5-1 1.5s-1-.672-1-1.5S9.448 5 10 5s1 .672 1 1.5z"/>
+              </svg>
+            </div>
+            <div class="col-9">Ops! C'è stato un problema. Riprova di nuovo o se il problema persiste contatta Manuel al numero che trovi in fondo alla pagina.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
