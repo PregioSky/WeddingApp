@@ -15,6 +15,6 @@ export class PlaceCard {
   city: string = 'City Name'
   @Input()
   description: string =
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna.'
+    'Io sono qui'
   constructor() {}
 }
