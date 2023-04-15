@@ -1,5 +1,5 @@
 <div class="viaggio-container">
-  <nav data-role="Header" class="viaggio-navbar">
+  <nav data-role="Header" id="headertab" class="viaggio-navbar">
     <div class="viaggio-container01">
       <h1 class="viaggio-logo">Regalaci un viaggio</h1>
     </div>
@@ -8,8 +8,8 @@
       <div class="viaggio-right-side">
         <div class="viaggio-links-container">
           <a routerLink="/" class="viaggio-link">Home page</a>
-          <a href="#itnierario" class="viaggio-link">Itinerario</a>
-          <a href="#sezioneregalo" class="viaggio-link">Sezione regalo</a>
+          <a (click)="scroll(itnierario)" class="viaggio-link">Itinerario</a>
+          <a (click)="scroll(sezioneregalo)" class="viaggio-link">Sezione regalo</a>
         </div>
       </div>
     </div>
@@ -43,8 +43,8 @@
         <div class="viaggio-right-side1">
           <div class="viaggio-links-container1">
             <a routerLink="/" class="viaggio-text">Home Page</a>
-            <a href="#itnierario" class="viaggio-text01">Itinerario</a>
-            <a href="#sezioneregalo" class="viaggio-text02">Sezione Regalo</a>
+            <a (click)="scroll(itnierario)" class="viaggio-text01">Itinerario</a>
+            <a (click)="scroll(sezioneregalo)" class="viaggio-text02">Sezione Regalo</a>
           </div>
         </div>
       </div>
@@ -56,40 +56,41 @@
       <h1 class="viaggio-text04">Regalaci il viaggio dei nostri sogni!</h1>
     </div>
   </div>
-  <div id="itnierario" class="viaggio-blog">
-    <blog-post-card4
-      date="Tokyo"
-      label="La grande metropoli"
-      image_src="https://images.unsplash.com/photo-1584660470766-20ac1a28c7fe?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDI5fHx0b2t5b3xlbnwwfHx8fDE2NzUxMjIzNjc&amp;ixlib=rb-4.0.3&amp;w=1500"
-      description="Tokyo è una metropoli affascinante e vivace, sarà la prima tappa del nostro viaggio! Vogliamo assolutamente visitare il quartiere di Shibuya, Il Tempio di Asakusa, la torre Tokyo Skytree e il Museo Nazionale! Per non parlare poi delle deliziose botteghe storiche situate tra le vie di Tokyo. Speriamo inoltre di poter fare una bella scorta di gadget e souvenir a tema manga, che dite, le nostre valigie saranno abbastanza capienti?"
-      rootClassName="rootClassName1"
-    ></blog-post-card4>
-    <div class="viaggio-container06">
+  <div #itnierario id="itnierario" class="row"><h1 class="itinerariotitle">Itinerario</h1></div>
+  <div class="viaggio-blog">
       <blog-post-card4
-        date="Kyoto"
-        label="Un tuffo nella tardizione"
-        image_src="https://images.unsplash.com/photo-1624253346805-df69ad2b3d7f?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDh8fGt5b3RvfGVufDB8fHx8MTY3NTEyMjQxNg&amp;ixlib=rb-4.0.3&amp;w=1500"
-        description="Kyoto è una delle città più famose e belle del Giappone, ricca di storia, cultura e tradizioni. Ospita ben 2000 templi e santuari oltre che il Palazzo Imperiale,  antica residenza degli imperatori giapponesi, oggi aperta al pubblico come museo. Immancabile poi da visitare anche Gion,  il quartiere geisha di Kyoto, famoso per le sue strade storiche, i negozi tradizionali e gli spettacoli di geisha e maiko. Queste sono solo alcune delle principali attrazioni di Kyoto che vorremmo vedere: la città è così ricca di meraviglie che una sola visita non basterà per scoprirle tutte, ma cercheremo di impegnarci!"
-        rootClassName="rootClassName2"
+        date="Tokyo"
+        label="La grande metropoli"
+        image_src="https://images.unsplash.com/photo-1584660470766-20ac1a28c7fe?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDI5fHx0b2t5b3xlbnwwfHx8fDE2NzUxMjIzNjc&amp;ixlib=rb-4.0.3&amp;w=1500"
+        description="Tokyo è una metropoli affascinante e vivace, sarà la prima tappa del nostro viaggio! Vogliamo assolutamente visitare il quartiere di Shibuya, Il Tempio di Asakusa, la torre Tokyo Skytree e il Museo Nazionale! Per non parlare poi delle deliziose botteghe storiche situate tra le vie di Tokyo. Speriamo inoltre di poter fare una bella scorta di gadget e souvenir a tema manga, che dite, le nostre valigie saranno abbastanza capienti?"
+        rootClassName="rootClassName1"
       ></blog-post-card4>
+      <div class="viaggio-container06">
+        <blog-post-card4
+          date="Kyoto"
+          label="Un tuffo nella tardizione"
+          image_src="https://images.unsplash.com/photo-1624253346805-df69ad2b3d7f?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDh8fGt5b3RvfGVufDB8fHx8MTY3NTEyMjQxNg&amp;ixlib=rb-4.0.3&amp;w=1500"
+          description="Kyoto è una delle città più famose e belle del Giappone, ricca di storia, cultura e tradizioni. Ospita ben 2000 templi e santuari oltre che il Palazzo Imperiale,  antica residenza degli imperatori giapponesi, oggi aperta al pubblico come museo. Immancabile poi da visitare anche Gion,  il quartiere geisha di Kyoto, famoso per le sue strade storiche, i negozi tradizionali e gli spettacoli di geisha e maiko. Queste sono solo alcune delle principali attrazioni di Kyoto che vorremmo vedere: la città è così ricca di meraviglie che una sola visita non basterà per scoprirle tutte, ma cercheremo di impegnarci!"
+          rootClassName="rootClassName2"
+        ></blog-post-card4>
+        <blog-post-card4
+          date="Okinawa"
+          image_src="https://images.unsplash.com/photo-1609673889466-61145b2084f3?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDZ8fG9raW5hd2F8ZW58MHx8fHwxNjc1MTIyNDQ2&amp;ixlib=rb-4.0.3&amp;w=1500"
+          description="Okinawa è una bellissima prefettura giapponese situata nell&apos;estremo sud del paese, composta da molte isole e arcipelaghi. Sicuramente avrai già sentito parlare delle sue famose spiagge di sabbia bianca  e acque cristalline! Per non parlare poi del Shuri Castle: situato nella città di Naha, e delle Isole Kerama: un arcipelago a sud-ovest di Okinawa. Questa regione del Giappone offre una vasta gamma di attrazioni naturali, culturali e storiche, sicuramente sarà una tappa fondamentale del nostro tour!"
+          label="Spiagge stellate"
+          rootClassName="Spiagge stellate"
+        ></blog-post-card4>
+      </div>
       <blog-post-card4
-        date="Okinawa"
-        image_src="https://images.unsplash.com/photo-1609673889466-61145b2084f3?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDZ8fG9raW5hd2F8ZW58MHx8fHwxNjc1MTIyNDQ2&amp;ixlib=rb-4.0.3&amp;w=1500"
-        description="Okinawa è una bellissima prefettura giapponese situata nell&apos;estremo sud del paese, composta da molte isole e arcipelaghi. Sicuramente avrai già sentito parlare delle sue famose spiagge di sabbia bianca  e acque cristalline! Per non parlare poi del Shuri Castle: situato nella città di Naha, e delle Isole Kerama: un arcipelago a sud-ovest di Okinawa. Questa regione del Giappone offre una vasta gamma di attrazioni naturali, culturali e storiche, sicuramente sarà una tappa fondamentale del nostro tour!"
-        label="Spiagge stellate"
-        rootClassName="Spiagge stellate"
+        date="Osaka"
+        image_src="https://images.unsplash.com/photo-1590559899731-a382839e5549?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fG9zYWthfGVufDB8fHx8MTY3NTEyMjQzMg&amp;ixlib=rb-4.0.3&amp;w=1500"
+        description="Osaka sarà senza alcun dubbio la meta culinaria del nostro tour giapponese: oltre che per le sue bellissime architetture è celebre infatti per la sua cucina e i suoi ristoranti! Infatti andremo sicuramente a visitare il quartiere di Shinsekai: una zona tradizionale di Osaka, famoso per i suoi ristoranti che offrono specialità locali come takoyaki, okonomiyaki e kushikatsu. Faremo senz&apos;altro un salto anche al Tempio di Shitennoji e al tempio di Sumiyoshi Taisha, monumenti storici di questa fantastica città.  Torneremo da Osaka soddisfatti e con la pancia piena? Noi crediamo di sì!"
+        label="Oknomiyaki!"
+        rootClassName="Oknomiyaki!"
       ></blog-post-card4>
-    </div>
-    <blog-post-card4
-      date="Osaka"
-      image_src="https://images.unsplash.com/photo-1590559899731-a382839e5549?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDF8fG9zYWthfGVufDB8fHx8MTY3NTEyMjQzMg&amp;ixlib=rb-4.0.3&amp;w=1500"
-      description="Osaka sarà senza alcun dubbio la meta culinaria del nostro tour giapponese: oltre che per le sue bellissime architetture è celebre infatti per la sua cucina e i suoi ristoranti! Infatti andremo sicuramente a visitare il quartiere di Shinsekai: una zona tradizionale di Osaka, famoso per i suoi ristoranti che offrono specialità locali come takoyaki, okonomiyaki e kushikatsu. Faremo senz&apos;altro un salto anche al Tempio di Shitennoji e al tempio di Sumiyoshi Taisha, monumenti storici di questa fantastica città.  Torneremo da Osaka soddisfatti e con la pancia piena? Noi crediamo di sì!"
-      label="Oknomiyaki!"
-      rootClassName="Oknomiyaki!"
-    ></blog-post-card4>
   </div>
   <div class="viaggio-container07"></div>
-  <div id="sezioneregalo" class="viaggio-container08">
+  <div #sezioneregalo id="sezioneregalo" class="viaggio-container08">
     <div class="viaggio-banner">
       <h2 class="viaggio-text05">
         <span>

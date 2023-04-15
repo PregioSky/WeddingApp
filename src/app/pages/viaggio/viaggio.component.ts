@@ -18,8 +18,21 @@ export class Viaggio {
       },
     ])
   }
+
+  ngOnInit(): void {
+    window.scrollTo(0,0);
+  }
+
   showIban() {
     this.iban=true;
+  }
+
+  scroll(el: HTMLElement) {
+    console.log('id ', el);
+    const box = document.getElementById(el.id)!;
+    var h = document.getElementById("headertab")!.offsetHeight + "px";
+    box.style.scrollMargin= h;
+    el.scrollIntoView({behavior: 'smooth'});
   }
 }
 

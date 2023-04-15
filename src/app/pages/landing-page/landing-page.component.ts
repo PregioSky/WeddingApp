@@ -43,6 +43,7 @@ export class LandingPage {
     });
   }
   ngOnInit(): void {
+    window.scrollTo(0,0);
     this.createForm.markAllAsTouched();
     this.createForm.patchValue({
       partecipation: 'Y',
@@ -72,4 +73,13 @@ export class LandingPage {
         myModal.show();
       });
   }
+
+scroll(el: HTMLElement) {
+  console.log('id ', el);
+  const box = document.getElementById(el.id)!;
+  var h = document.getElementById("headertab")!.offsetHeight + "px";
+  box.style.scrollMargin= h;
+  el.scrollIntoView({behavior: 'smooth'});
+}
+
 }

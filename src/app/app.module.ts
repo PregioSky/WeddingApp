@@ -37,7 +37,6 @@ const routes = [
     BrowserModule,
     AppRoutingModule,
     AmplifyAuthenticatorModule, BrowserModule, RouterModule.forRoot(routes,{
-      scrollPositionRestoration: 'enabled'
     }), ComponentsModule,FormsModule,
     ReactiveFormsModule
   ],

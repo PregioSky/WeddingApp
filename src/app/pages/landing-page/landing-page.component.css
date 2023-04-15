@@ -87,6 +87,7 @@
   font-size: 1.45rem;
   margin-right: var(--dl-space-space-unit);
   text-decoration: none;
+  cursor: pointer;
 }
 .landing-page-container005 {
   flex: 0 0 auto;

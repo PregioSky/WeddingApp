@@ -1,6 +1,6 @@
 <div class="landing-page-container Content">
   <div class="landing-page-top-container">
-    <nav data-role="Header" class="landing-page-navbar">
+    <nav data-role="Header" id="headertab" class="landing-page-navbar">
       <div class="landing-page-container001">
         <div class="landing-page-container002">
           <h1 class="landing-page-logo">Il matrimonio di Emanuela e Manuel</h1>
@@ -10,12 +10,12 @@
       <div class="landing-page-container004">
         <div class="landing-page-right-side">
           <div class="landing-page-links-container">
-            <a href="#agenda" class="landing-page-link">
+            <a (click)="scroll(agenda)" class="landing-page-link">
               Agenda dell&apos;evento
             </a>
-            <a href="#oraeluogo" class="landing-page-link">Ora e Luogo</a>
-            <a href="#rsvp" class="landing-page-link">RSVP</a>
-            <a href="#viaggio" class="landing-page-link">
+            <a (click)="scroll(oraeluogo)" class="landing-page-link">Ora e Luogo</a>
+            <a (click)="scroll(rsvp)"class="landing-page-link">RSVP</a>
+            <a (click)="scroll(viaggio)" class="landing-page-link">
               Regalaci un viaggio
             </a>
           </div>
@@ -52,10 +52,10 @@
           </div>
           <div class="landing-page-right-side1">
             <div class="landing-page-links-container1">
-              <span class="landing-page-text">Agenda dell&apos;evento</span>
-              <span class="landing-page-text01">Ora e Luogo</span>
-              <span class="landing-page-text02">RSVP</span>
-              <span class="landing-page-text03">Regalaci un viaggio</span>
+              <span (click)="scroll(agenda)" class="landing-page-text">Agenda dell&apos;evento</span>
+              <span (click)="scroll(oraeluogo)" class="landing-page-text01">Ora e Luogo</span>
+              <span (click)="scroll(rsvp)" class="landing-page-text02">RSVP</span>
+              <span (click)="scroll(viaggio)" class="landing-page-text03">Regalaci un viaggio</span>
             </div>
           </div>
         </div>
@@ -69,9 +69,9 @@
       </div>
     </div>
   </div>
-  <div id="main-section" class="landing-page-main">
+  <div #agenda id="agenda" class="landing-page-main">
     <h1 class="landing-page-text07">Agenda dell&apos;evento</h1>
-    <div id="agenda" class="landing-page-agenda">
+    <div class="landing-page-agenda">
       <div class="landing-page-container006">
         <div class="landing-page-container007"></div>
         <div class="landing-page-container008">
@@ -302,7 +302,7 @@
       </div>
     </div>
     <div class="landing-page-container041"></div>
-    <div id="oraeluogo" class="landing-page-ora-e-luogo">
+    <div #oraeluogo id="oraeluogo" class="landing-page-ora-e-luogo">
       <h1 class="landing-page-text24">Luogo e ora</h1>
       <span class="landing-page-text25">
         <br />
@@ -322,7 +322,7 @@
       </div>
     </div>
     <div class="landing-page-container042"></div>
-    <div id="rsvp" class="landing-page-rsvp">
+    <div #rsvp id="rsvp" class="landing-page-rsvp">
       <div class="landing-page-container043">
         <div class="landing-page-container044">
           <span class="landing-page-text28">Répondez s&apos;il vous plaît</span>
@@ -434,7 +434,7 @@
       </div>
     </div>
     <div class="landing-page-container067"></div>
-    <div id="viaggio" class="landing-page-viaggio">
+    <div #viaggio id="viaggio" class="landing-page-viaggio">
       <div class="landing-page-hero1">
         <div class="landing-page-container068">
           <h1 class="landing-page-text39">Regalaci un Viaggio</h1>
