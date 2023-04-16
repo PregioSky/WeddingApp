@@ -18,24 +18,18 @@
   padding: var(--dl-space-space-doubleunit);
   z-index: 100;
   position: fixed;
-  flex-wrap: wrap;
   max-width: auto;
   align-items: center;
   flex-direction: row;
   justify-content: space-between;
   background-color: var(--dl-color-primary-darktheme);
-}
-.viaggio-container01 {
   flex: 0 0 auto;
-  width: 40%;
-  height: auto;
-  display: flex;
-  align-items: flex-start;
-  flex-direction: column;
+  align-self: flex-start;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
 }
 .viaggio-logo {
   color: var(--dl-color-primary-sfondomorbido);
-  width: 100%;
   font-size: 2.8rem;
   margin-bottom: 0;
 }
@@ -66,7 +60,7 @@
   justify-content: space-between;
 }
 .viaggio-link {
-  color: var(--dl-color-primary-sfondomorbido);
+  color: var(--dl-color-primary-sfondomorbido) !important;;
   font-size: 2rem;
   margin-right: var(--dl-space-space-doubleunit);
   text-decoration: none;
@@ -605,6 +599,19 @@
   color: var(--dl-color-primary-darktheme);
   font-size: 3.5em;
   padding-top: 1em;
+}
+.width-navbar-row{
+  width: 100%;
+}
+.all-right{
+  justify-content: flex-end;
+}
+.no-margin-right{
+  margin-right: 0 !important;
+}
+.size-button{
+  width: 1.2em;
+  height: 1.2em;
 }
 @media(max-width: 1600px) {
   .viaggio-container01 {

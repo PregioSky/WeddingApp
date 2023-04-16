@@ -1,52 +1,23 @@
 <div class="viaggio-container">
-  <nav data-role="Header" id="headertab" class="viaggio-navbar">
-    <div class="viaggio-container01">
+
+  <nav id="headertab" class="navbar navbar-expand-lg navbar-dark bg-dark viaggio-navbar">
+    <div class="container-fluid">
       <h1 class="viaggio-logo">Regalaci un viaggio</h1>
-    </div>
-    <div class="viaggio-container02"></div>
-    <div class="viaggio-container03">
-      <div class="viaggio-right-side">
-        <div class="viaggio-links-container">
-          <a routerLink="/" class="viaggio-link">Home page</a>
-          <a (click)="scroll(itnierario)" class="viaggio-link">Itinerario</a>
-          <a (click)="scroll(sezioneregalo)" class="viaggio-link">Sezione regalo</a>
-        </div>
-      </div>
-    </div>
-    <div class="viaggio-container04">
-      <div data-role="BurgerMenu" class="viaggio-burger-menu">
-        <svg viewBox="0 0 1024 1024" class="viaggio-burger-menu">
-          <path
-            d="M810.667 725.333h-597.333c-47.061 0-85.333 38.272-85.333 85.333s38.272 85.333 85.333 85.333h597.333c47.061 0 85.333-38.272 85.333-85.333s-38.272-85.333-85.333-85.333z"
-          ></path>
-          <path
-            d="M810.667 426.667h-597.333c-47.061 0-85.333 38.272-85.333 85.333s38.272 85.333 85.333 85.333h597.333c47.061 0 85.333-38.272 85.333-85.333s-38.272-85.333-85.333-85.333z"
-          ></path>
-          <path
-            d="M810.667 128h-597.333c-47.061 0-85.333 38.272-85.333 85.333s38.272 85.333 85.333 85.333h597.333c47.061 0 85.333-38.272 85.333-85.333s-38.272-85.333-85.333-85.333z"
-          ></path>
-        </svg>
-      </div>
-    </div>
-    <div data-role="MobileMenu" class="viaggio-mobile-menu">
-      <div class="viaggio-nav">
-        <div class="viaggio-top">
-          <h1 class="viaggio-logo1">Regalaci un Viaggio</h1>
-          <div data-role="CloseMobileMenu" class="viaggio-close-menu">
-            <svg viewBox="0 0 1024 1024" class="viaggio-icon3">
-              <path
-                d="M810 274l-238 238 238 238-60 60-238-238-238 238-60-60 238-238-238-238 60-60 238 238 238-238z"
-              ></path>
-            </svg>
-          </div>
-        </div>
-        <div class="viaggio-right-side1">
-          <div class="viaggio-links-container1">
-            <a routerLink="/" class="viaggio-text">Home Page</a>
-            <a (click)="scroll(itnierario)" class="viaggio-text01">Itinerario</a>
-            <a (click)="scroll(sezioneregalo)" class="viaggio-text02">Sezione Regalo</a>
-          </div>
-        </div>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon size-button"></span>
+      </button>
+      <div class="collapse navbar-collapse all-right" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 no-margin-right">
+          <li class="nav-item">
+            <a class="nav-link active viaggio-link" routerLink="/" aria-current="page">Home page</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active viaggio-link" (click)="scroll(itnierario)" aria-current="page">Itinerario</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active viaggio-link" (click)="scroll(sezioneregalo)" aria-current="page">Sezione Regalo</a>
+          </li>
+        </ul>
       </div>
     </div>
   </nav>

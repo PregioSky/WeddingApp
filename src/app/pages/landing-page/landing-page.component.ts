@@ -60,6 +60,14 @@ export class LandingPage {
       .then(() => {
         console.log('nome e cognome: ' + guest.nameSurname + " | partecipa: "+ guest.partecipation + " | navetta: " + guest.shuttle+" | intolleranze: " + guest.intolerances + "testo: " + guest.freeText);
         this.createForm.reset();
+        this.createForm.markAllAsTouched();
+        this.createForm.patchValue({
+          partecipation: 'Y',
+          nameSurname: '',
+          intolerances: '',
+          shuttle: 'N',
+          freeText: ''
+        })
         this.serviceOK=true;
         const element = document.getElementById('outcomeModal') as HTMLElement;
         const myModal = new Modal(element);
