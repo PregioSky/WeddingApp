@@ -230,8 +230,8 @@
 }
 .viaggio-button {
   color: var(--dl-color-primary-sfondomorbido);
-  width: 40%;
-  font-size: 1.3rem;
+  width: 50%;
+  font-size: 1.2rem;
   text-align: center;
   transition: 0.3s;
   padding-top: var(--dl-space-space-halfunit);
@@ -644,6 +644,10 @@
   .viaggio-link {
     font-size: 1.5rem;
   }
+  .viaggio-button {
+    font-size: 1rem;
+    width: 60%;
+  }
 }
 @media(max-width: 1200px) {
   .viaggio-logo {
@@ -716,6 +720,9 @@
   }
   .viaggio-link {
     font-size: 1.25rem;
+  }
+  .viaggio-button {
+    font-size: 0.95rem;
   }
 }
 @media(max-width: 991px) {
@@ -958,7 +965,7 @@
   }
   .viaggio-button {
     padding: 0px;
-    font-size: 1.1rem;
+    font-size: 0.85rem;
   }
   .viaggio-container23 {
     display: none;
